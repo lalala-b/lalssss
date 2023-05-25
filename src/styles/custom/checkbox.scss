@@ -1,0 +1,8 @@
+.el-checkbox {
+  &__inner {
+    &:after {
+      top:2px;
+      height: 5px;
+    }
+  }
+}

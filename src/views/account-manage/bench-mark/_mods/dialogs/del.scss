@@ -1,0 +1,31 @@
+.M-benchmarkDelDialog {
+    &Text {
+        .el-button {
+            padding: 0 5px;
+        }
+    }
+
+    &Tags {
+        display: flex;
+        &Label {
+            text-align: right;
+            margin: 0 10px 0 0;
+        }
+
+        &Con {
+            flex:1;
+            p {
+                color:#909399;
+            }
+        }
+    }
+
+    .el-tag {
+        margin:0 10px 10px 0;
+    }
+    .input-new-tag {
+        width: 90px;
+        margin:0 0 10px 0;
+        vertical-align: bottom;
+    }
+}

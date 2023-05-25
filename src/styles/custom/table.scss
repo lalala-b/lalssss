@@ -1,0 +1,50 @@
+.el-table {
+  color: #000000;
+  thead {
+    font-weight: 400;
+  }
+  th, td {
+    text-align: center;
+    &.is-left {
+      text-align: left;
+    }
+  }
+  .table-header,
+  &__header {
+    .el-tooltip.tooltip-label {
+      color: #666666;
+      font-size: 14px;
+      .iconfont {
+        color: #666666;
+      }
+    }
+  }
+  &__body {
+    .el-tooltip.tooltip-label {
+      .iconfont {
+        color: $--color-primary;
+        font-size: 19px;
+      }
+    }
+  }
+  .cell {
+    line-height: 22px;
+  }
+  .caret-wrapper {
+    height: 22px;
+  }
+  .sort-caret {
+    &.ascending {
+      top: 0;
+    }
+    &.descending {
+      bottom: 0
+    }
+  }
+  &__fixed-right {
+    z-index: 12;
+  }
+
+}
+
+// #f5f7f8

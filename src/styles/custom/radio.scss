@@ -1,0 +1,30 @@
+// .el-radio {
+//   .is-checked {
+//     .el-radio__inner {
+//       border-color: $--color-primary;
+//       background: $--color-white;
+//       &::after {
+//         background-color:$--color-primary;
+//       }
+//     }
+//   }
+//   &__inner {
+//     &:after {
+//       width: 8px;
+//       height: 8px;
+//     }
+//   }
+//   &-button {
+//     &:first-child &__inner {
+//       border-radius: 2px 0px 0px 2px;
+//     }
+//     &:last-child &__inner {
+//       border-radius: 2px 0px 0px 2px;
+//     }
+//     &__orig-radio:checked+&__inner {
+//       background: rgba(0, 95, 246, 0.1);
+//       color: #005EFF;
+//     }
+//   }
+
+// }

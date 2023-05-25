@@ -1,0 +1,81 @@
+@import "@/assets/container.scss";
+@import "@/assets/def.scss";
+
+// .P-users {
+//     &Con {
+//         .con();
+//         margin: 0 0 24px;
+//         &:last-child {
+//             margin: 0;
+//         }
+//         &Title {
+//             .conTitle();
+//         }
+//     }
+
+//     &Search {
+//         .el-select {
+//             .el-input {
+//                 width: 130px;
+//             }
+//         }
+
+//         .el-date-editor {
+//             width: 240px;
+//         }
+//     }
+
+//     &Table {
+//         &Head {
+//             background: #F6F8FA;
+//             th {
+//                 text-align: center;
+//                 background: #F6F8FA;
+//                 &:nth-child(1) {
+//                     text-align: left;
+//                 }
+//             }
+//         }
+
+//         &Row {
+//             td {
+//                 text-align: center;
+//                 // background: #F6F8FA;
+//                 &:nth-child(1) {
+//                     text-align: left;
+//                 }
+//             }
+//         }
+
+//         &ThBr {
+//             white-space: nowrap;
+//         }
+
+//         &Pager {
+//             margin: 40px 0 0;
+//             text-align: center;
+//             .el-pagination {
+//                 display: inline-block;
+//             }
+//         }
+//     }
+
+//     &Dialog {
+//         .el-input{
+//             width: 200px;
+//         }
+//         .dialogForm();
+//         &Text {
+//             .el-button {
+//                 padding: 0 5px;
+//             }
+//         }
+
+//         &Belong {
+//             .el-select {
+//                 width: 140px;
+//             }
+//         }
+//     }
+
+// }

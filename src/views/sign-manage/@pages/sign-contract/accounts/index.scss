@@ -1,0 +1,61 @@
+
+.P-advertisingLaunch {
+  .account-search {
+    width: 100%;
+    .el-select-dropdown {
+      .el-select-dropdown__item {
+        height: auto !important;
+        line-height: 1.2 !important;
+        padding: 10px;
+        .flex-row > * {
+          margin: initial;
+        }
+        .account-img {
+          width: 40px;
+          border-radius: 50%;
+          margin-right: 8px;
+        }
+        .account-info {
+          display: flex;
+          flex: 1;
+          justify-content: center;
+          flex-direction: column;
+          margin-right: 10px;
+        }
+        .account-fans {
+          flex: initial;
+          width: 80px;
+        }
+        .account-text1 {
+          font-size: 14px;
+        }
+        .account-text2 {
+          font-size: 12px;
+          margin-top: 6px;
+        }
+        .account-name {
+          font-weight: bold;
+          width: 170px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+.add-form {
+  .plat-info {
+    margin-top: 10px;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .input-new-tag {
+    width: 200px;
+  }
+}
+.dialog-footer {
+    text-align: center;
+}

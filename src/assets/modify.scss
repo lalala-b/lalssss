@@ -1,0 +1,20 @@
+@import './new-var';
+
+.el-table{
+    color: #303133;
+}
+
+.el-dialog__header{
+    border-bottom: 1px solid $bordergray;
+}
+.el-dialog__footer{
+    text-align: center;
+}
+
+.el-select-dropdown__wrap {
+  max-height: 320px !important;
+}
+
+// .el-input{
+//     width: 200px;
+// }

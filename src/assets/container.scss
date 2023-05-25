@@ -1,0 +1,42 @@
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin con {
+  padding: 24px;
+  background: #fff;
+}
+
+@mixin conTitle {
+  display: flex;
+  margin: 0 0 10px;
+  flex-direction: row;
+  justify-content:space-between;
+  [data-type="title"] {
+      height: 38px;
+      font-size: 16px;
+      line-height: 38px;
+      font-weight: bolder;
+  }
+
+  [data-type="fns"] {
+      height: 38px;
+      line-height: 38px;
+
+      .el-form-item {
+          margin-bottom: 0;
+          line-height: initial;
+          vertical-align: middle;
+          &:last-child {
+              margin: 0;
+          }
+      }
+
+      .el-button {
+          padding: 7px 20px;
+          line-height: initial;
+          vertical-align: middle;
+      }
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../../../../assets/container.scss";
+.P-advertisingLaunchOrders {
+    &Con {
+        @include con();
+        margin: 0 0 24px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+    // .table-view {
+    //     padding: 24px 0;
+    // }
+
+    &Search {
+        &Normal {
+            &Con {
+                display: inline-block;
+                .el-form-item {
+                    white-space: nowrap;
+                }
+                .el-input {
+                    width: 120px;
+                    display: inline-block;
+                }
+                [data-t] {
+                    margin: 0 10px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

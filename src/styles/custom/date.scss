@@ -1,0 +1,11 @@
+.el-date {
+  &-editor {
+    .el-range {
+      &__icon,
+      &-separator,
+      &__close-icon {
+        line-height: 24px;
+      }
+    }
+  }
+}

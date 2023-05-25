@@ -1,0 +1,15 @@
+.el-dialog {
+  $--pading-top: 16px;
+  &__header {
+    padding-bottom: $--pading-top;
+    padding-top: $--pading-top;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  }
+  &__headerbtn {
+    top: $--pading-top;
+  }
+  &__body {
+    padding-top: $--dialog-padding-primary;
+    padding-bottom: $--dialog-padding-primary;
+  }
+}

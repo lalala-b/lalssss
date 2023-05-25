@@ -1,0 +1,39 @@
+@mixin accountSearch() {
+  .account-search {
+    .el-select-dropdown {
+      .el-select-dropdown__item {
+        height: auto !important;
+        line-height: 1.2 !important;
+        padding: 10px;
+        .flex-row > * {
+          margin: initial;
+        }
+        .account-img {
+          width: 40px;
+          border-radius: 50%;
+          margin-right: 8px;
+        }
+        .account-info {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          margin-right: 10px;
+        }
+        .account-text1 {
+          font-size: 14px;
+        }
+        .account-text2 {
+          font-size: 12px;
+          margin-top: 6px;
+        }
+        .account-name {
+          font-weight: bold;
+          width: 170px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

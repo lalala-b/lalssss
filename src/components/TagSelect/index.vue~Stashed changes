@@ -1,0 +1,222 @@
+<template>
+  <div class="tag-select" :class="{'tag-select--inline': inline && !tagOpen && !isTagCheck}">
+    <slot v-if="this.$slots.left" name="left" />
+    <div v-else-if="label" class="tag-select__left">
+      <span class="tag-select__left-label">{{ label }}</span>
+    </div>
+
+    <div v-if="!isTagCheck" ref="tagWrap" class="tag-select__wrap">
+      <el-tag
+        v-for="(item, index) in data"
+        :key="model === 'arr-obj' ? item[labelKey] : item"
+        class="tag-select__item"
+        :size="size"
+        :class="{ 'tag-select__item-select': sIndex === index }"
+        @click="handleTagClick(index)"
+      >{{ model === 'arr-obj' ? item[labelKey] : item }}</el-tag>
+    </div>
+
+    <div v-else class="tag-select__check-wrap">
+      <el-checkbox-group v-model="checks" :size="size" @change="handleCheckChange">
+        <template v-for="item in data">
+          <el-checkbox
+            v-if="item.tagName !== '全部'"
+            :key="model === 'arr-obj' ? item[labelKey] : item"
+            :label="model === 'arr-obj' ? item[valKey] : item"
+          >{{ model === 'arr-obj' ? item[labelKey] : item }}</el-checkbox>
+        </template>
+      </el-checkbox-group>
+      <span class="cancel-btn" @click="handleCheckTagCancel">取消多选</span>
+    </div>
+
+    <div v-if="inline" class="tag-select__right">
+      <template v-if="!$slots.right && !isTagCheck">
+        <span v-if="hasShowOpen" @click="tagOpen = !tagOpen">
+          {{ tagOpen ? '收起' :'展开' }}
+          <i :class="tagOpen ? 'el-icon-arrow-up': 'el-icon-arrow-down'" />
+        </span>
+        <el-button
+          v-if="check"
+          class="m-l-10"
+          size="mini"
+          @click="handleCheckTagCancel"
+        >多选</el-button>
+      </template>
+      <slot name="right" />
+    </div>
+  </div>
+</template>
+<script>
+import { isArray } from '@/utils'
+export default {
+  props: {
+    inline: {
+      type: Boolean,
+      default: true
+    },
+    check: {
+      type: Boolean,
+      default: false
+    },
+    data: {
+      type: Array,
+      default() {
+        return []
+      }
+    },
+    model: {
+      type: String,
+      default: 'arr-obj'
+    },
+    labelKey: {
+      type: String,
+      default: 'text'
+    },
+    valKey: {
+      type: String,
+      default: 'val'
+    },
+    size: {
+      type: String,
+      default: 'small'
+    },
+    label: String,
+    value: String | Array | Number
+  },
+  data() {
+    return {
+      sIndex: 0,
+      tagOpen: false,
+      isTagCheck: false,
+      hasShowOpen: false,
+      checks: []
+    }
+  },
+  watch: {
+    value: {
+      immediate: false,
+      handler(val) {
+        if (this.check && this.isTagCheck) {
+          this.checks = isArray(val) ? [...val] : [val]
+        } else {
+          this.sIndex = this.data.findIndex(item => {
+            if (this.model === 'arr-obj') {
+              return item[this.valKey] == val
+            } else {
+              return item == val
+            }
+          })
+        }
+      }
+    },
+
+    data: {
+      immediate: true,
+      handler(val) {
+        if (val.length > 0) {
+          this.$nextTick(() => {
+            this.shouldShowOpen()
+          })
+        }
+      }
+    }
+  },
+  created() {
+    window.addEventListener('resize', this.shouldShowOpen)
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.shouldShowOpen)
+  },
+  methods: {
+    handleCheckChange() {
+      this.$emit('input', this.checks)
+      this.$emit('change', this.checks)
+    },
+    // 标签点击事件
+    handleTagClick(index) {
+      this.sIndex = index
+      const sItem = this.data[index]
+      let val
+      if (this.model === 'arr-obj') {
+        val = sItem[this.valKey]
+      } else {
+        val = sItem
+      }
+      this.$emit('input', val)
+      this.$emit('change', val)
+    },
+    handleCheckTagCancel() {
+      this.isTagCheck = !this.isTagCheck
+      this.sIndex = 0
+      this.checks = []
+      this.$emit('change', '')
+      this.$emit('input', '')
+    },
+    shouldShowOpen() {
+      if (this.isTagCheck) return
+      this.hasShowOpen = this.$refs['tagWrap'].querySelector('span:last-child').offsetTop > 30
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+  .tag-select {
+    display: flex;
+    line-height: 30px;
+    &__wrap {
+      position: relative;
+    }
+    &__item {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      color: rgba(0, 0, 0, 0.65);
+      background-color: white;
+      border: 1px solid #D9D9D9;
+      cursor: pointer;
+      &-select, &:hover {
+        background-color: $--color-primary;
+        border-color: $--color-primary;
+        color: white;
+      }
+      &.big {
+        font-size: 16px;
+      }
+    }
+    &--inline {
+      overflow: hidden;
+      height: 30px;
+    }
+    &__check-wrap {
+      display: flex;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      justify-content: center;
+      background: #fafafa;
+      padding: 10px;
+      ::v-deep {
+        margin-right: 10px;
+      }
+    }
+    &__left {
+      flex-shrink: 0;
+      display: block;
+      font-size: 14px;
+      margin-right: 24px;
+    }
+    &__right {
+      flex-shrink: 0;
+      color: #1890ff;
+      user-select: none;
+      cursor: pointer;
+    }
+    .cancel-btn {
+      display: inline-block;
+      margin: 0 auto;
+      color: #1890ff;
+      user-select: none;
+      cursor: pointer;
+    }
+  }
+</style>

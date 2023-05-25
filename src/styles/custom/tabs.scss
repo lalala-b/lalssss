@@ -1,0 +1,78 @@
+.el-tabs {
+  &--card {
+    &__active-bar {
+      display: none;
+    }
+    > .el-tabs__header {
+      margin: 0;
+      background: $--tabs-header-background-color;
+      border: 0;
+      .el-tabs__item {
+        border: 0;
+        &.is-active {
+          background: #fff;
+        }
+      }
+      .el-tabs__nav {
+        border: 0;
+      }
+    }
+  }
+
+  // &__nav-wrap {
+  //   &:after {
+  //     display: none;
+  //   }
+  // }
+
+  &__item {
+    font-size: 14px;
+    font-weight: 400;
+    color:$--color-text-regular;
+    transition: color .3s ease-out;
+    font-family: PingFangSC-Regular, PingFang SC;
+    // &.is-active {
+    //   background: #fff;
+    // }
+    .el-tooltip.tooltip-label {
+      color: inherit;
+      font-size: inherit;
+      .iconfont {
+        color: inherit;
+        font-size: inherit;
+      }
+    }
+  }
+
+  &__header {
+    margin: 0;
+    background: #fff;
+  }
+
+  &__nav-scroll {
+    // padding-left: 6px;
+  }
+
+  &--top &__item.is-top:nth-child(2),
+  &__item.is-bottom:nth-child(2) {
+    padding-left: 20px;
+  }
+
+  &--top &__item.is-top:last-child,
+  &__item.is-bottom:last-child {
+    padding-right: 20px;
+  }
+  &__nav-wrap {
+    &::after {
+      background-color: #D9D9D9;
+      height: 1px;
+    }
+  }
+  // &__active-bar {
+  //   height: 1px;
+  // }
+  &__content {
+    // 吸顶作用
+    overflow: visible;
+  }
+}

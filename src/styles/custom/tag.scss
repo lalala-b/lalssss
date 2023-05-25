@@ -1,0 +1,13 @@
+.el-tag {
+  background: $--tag-background-color;
+  border-color: $--tag-background-color;
+  vertical-align: middle;
+  &--mini {
+    height: $--tag-mini-height;
+    line-height: $--tag-mini-height;
+  }
+  &--dark {
+    background-color: $--color-primary;
+    border-color: $--color-primary;
+  }
+}

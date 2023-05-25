@@ -1,0 +1,15 @@
+@mixin avatar() {
+    display: inline-block;
+    // background: url("./_src/touxiang.png") 0 0 no-repeat;
+    background-size: contain;
+}
+
+@mixin dialogForm() {
+    .el-form {
+        width: 90%;
+    }
+}
+.bold{
+    font-weight:bold;
+    color:#303133;
+}

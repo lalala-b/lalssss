@@ -1,0 +1,53 @@
+.M-importVideo {
+    &Form {
+        .el-input {
+          width: 300px;
+        }
+        .el-input-number {
+            .el-input {
+                width: auto;
+            }
+        }
+
+        .upload-view {
+            .el-upload-dragger {
+                width: 190px;
+            }
+            .el-upload__text {
+                padding: 0 20px;
+                line-height: 1.2;
+            }
+            .pic {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .progress {
+            top: 50%;
+            left: 10px;
+            right: 10px;
+            position: absolute;
+            transform: translateY(-50%);
+
+            &Con {
+                overflow: hidden;
+                border-radius: 5px;
+                background: #f4f4f4;
+                div {
+                    height: 5px;
+                    overflow: hidden;
+                    border-radius: 5px;
+                    background: #409EFF;
+                    transition: width .3s;
+                }
+            }
+
+
+            p {
+                line-height: 1.3;
+                text-align: right;
+            }
+        }
+    }
+}

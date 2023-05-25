@@ -1,0 +1,20 @@
+.testarea {
+  margin: 20px;
+  padding: 20px;
+  background: #fff;
+  .area {
+    width: 300px;
+    margin: 0 0 20px;
+    > h3 {
+      margin: 0 0 20px;
+    }
+    
+    > div {
+      margin: 0 0 10px;
+      
+    }
+  }
+}
+#app {
+  overflow: auto;
+}

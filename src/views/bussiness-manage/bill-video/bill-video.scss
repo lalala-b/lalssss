@@ -1,0 +1,87 @@
+@import "@/assets/container.scss";
+.P-advertisingAdlib {
+    background: #fff;
+    .header-btn{
+        display: flex;
+        align-items: center;
+        height: 46px;
+        font-size: 20px;
+        .back-btn{
+            color: gray;
+            font-size: 20px;
+            padding: 0;
+        }
+    }
+    .header-contain {
+        display: flex;
+        & > div {
+            flex: 1;
+        }
+        .analyze-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 80%;
+                height: 80%;
+            }
+        }
+    }
+    .search-wrap {
+        margin-top: 20px;
+        .el-input {
+        width: auto;
+        display: inline-block;
+        }
+
+        [data-t] {
+        margin: 0 10px;
+        display: inline-block;
+        }
+    }
+  
+
+    &Table {
+        &Head {
+            background: #f6f8fa;
+            th {
+                text-align: center;
+                background: #f6f8fa;
+                &:nth-child(1) {
+                    text-align: left;
+                }
+            }
+        }
+
+        &Row {
+            td {
+                text-align: center;
+                // background: #F6F8FA;
+                &:nth-child(1) {
+                    text-align: left;
+                }
+            }
+        }
+
+        &ThBr {
+            white-space: nowrap;
+        }
+
+        &Pager {
+            margin: 40px 0 0;
+            text-align: center;
+            .el-pagination {
+                display: inline-block;
+            }
+        }
+    }
+    .adv-info-wrap {
+        display: flex;
+        padding-left: 40px;
+        // margin-left: 20px;
+        // border-left: 1px solid #ccc;
+        span {
+            margin-right: 50px;
+        }
+    }
+}

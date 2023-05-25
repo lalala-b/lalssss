@@ -1,0 +1,73 @@
+// @import "../../../../assets/container.scss";
+// @import "../../../../assets/var.scss";
+.P-advertisingArticle {
+    &Con {
+        padding: 24px;
+        background: #fff;
+    }
+    &Search {
+        display: flex;
+        margin: 0 0 22px;
+        // align-items: center;
+        justify-content: center;
+        .el-input {
+            width: 320px;
+            margin: 0 10px 0 0;
+            margin-right: 0;
+            input {
+                border-right: 0;
+            }
+        }
+    }
+
+    &Table {
+        // margin: 24px 0 0;
+        &Head {
+            background: #F6F8FA;
+            th {
+                text-align: center;
+                background: #F6F8FA;
+                &:nth-child(1) {
+                    text-align: left;
+                }
+            }
+        }
+
+        &Row {
+            td {
+                text-align: center;
+                // background: #F6F8FA;
+                &:nth-child(1) {
+                    text-align: left;
+                }
+            }
+        }
+
+        &ThBr {
+            white-space: nowrap;
+        }
+
+        &Pager {
+            margin: 40px 0 0;
+            text-align: center;
+            .el-pagination {
+                display: inline-block;
+            }
+        }
+
+        &Img {
+            width: 110px;
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        &Info {
+            text-align: left;
+            em {
+                // color:@darkgray;
+            }
+        }
+    }
+}

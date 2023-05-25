@@ -1,0 +1,18 @@
+.M-caseDialog {
+    &Type {
+        padding: 10px 0 0;
+        background: #fff;
+        &[data-type="2"] {
+            .el-select {
+                width: 140px;
+            }
+        }
+        .el-button--mini {
+            padding: 7px 15px;
+        }
+    }
+
+    .el-dialog__body {
+        padding: 0 20px;
+    }
+}

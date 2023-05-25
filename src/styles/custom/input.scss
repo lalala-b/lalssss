@@ -1,0 +1,9 @@
+.el-input {
+  &-group {
+    &__append, &prepend {
+      color: #ffffff;
+      background: $--color-primary;
+      border: 0;
+    }
+  }
+}

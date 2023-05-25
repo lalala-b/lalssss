@@ -1,0 +1,58 @@
+$themes: (
+  dark: (
+    // ---------------------  账号详情  ---------------------
+    // 卡片背景颜色
+    card_bg: #fff,
+    // 卡片阴影
+    card_shadow: 0 8px 18px #edeff7,
+    // 基本字体颜色
+    font_color: #333,
+    // label字体颜色
+    label_color: #eeeeee,
+    // 星图报价颜色
+    xt_money_color:#fe376b,
+    
+    // tab按钮颜色
+    tab_def_bg: #17223b,
+    // tab按钮选中颜色
+    tab_act_bg: #238dff,
+
+    th_bg: #2f4666,
+    th_odd_bg: #182a43,
+    th_hover_bg:rgba(160, 153, 153, 0.1),
+    th_border_color: rgba(223, 230, 236, .4),
+
+    // 搜索按钮背景颜色
+    search_bg: #3794ff,
+    search_font_color: #000
+    // ---------------------  账号详情  ---------------------
+  ),
+  whlte: (
+    // ---------------------  账号详情  ---------------------
+    // 卡片背景颜色
+    card_bg: #fff,
+    // 卡片阴影
+    card_shadow: 0 8px 18px #edeff7,
+    // 基本字体颜色
+    font_color: #333,
+    // label字体颜色
+    label_color: #333,
+    // 星图报价颜色
+    xt_money_color:#fe376b,
+    
+    // tab按钮颜色
+    tab_def_bg: #fff,
+    // tab按钮选中颜色
+    tab_act_bg: #238dff,
+
+    th_bg: #fff,
+    th_odd_bg: #fff,
+    th_hover_bg:rgba(160, 153, 153, 0.1),
+    th_border_color:#dfe6ec,
+
+    // 搜索按钮背景颜色
+    search_bg: #3794ff,
+    search_font_color: #fff
+    // ---------------------  账号详情  ---------------------
+  )
+);

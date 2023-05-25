@@ -1,0 +1,86 @@
+@import './element-variables.scss';
+
+@font-face {
+  font-family: 'DINAlternate-Bold';
+  src:  url('https://s1.zhuanstatic.com/common/u/font/DIN-Alternate-Bold.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+// base color
+$blue:#324157;
+$light-blue:#3A71A8;
+$red:#C03639;
+$pink: #E65D6E;
+$green: #30B08F;
+$tiffany: #4AB7BD;
+$yellow:#FEC171;
+$panGreen: #30B08F;
+
+// hearder
+$headerHeight: 64px;
+
+$headerBg: $--color-primary;
+// $headerBg: #fff;
+$headerColor: rgb(236, 236, 236);
+// $headerColor: #000;
+
+// sidebar
+$menuWidth: 216px;
+$menuText: rgba(0, 0, 0, .65);
+$menuActiveText: $--color-primary;
+// $subMenuActiveTex: $--color-primary;
+
+$menuBg:#fff;
+$menuHover:#E6F3FF;
+
+$subMenuBg:#fff;
+$subMenuHover:#E6F3FF;
+
+$sideBarWidth: 160px;
+
+// 默认背景色
+// $defBgColor:#26344B;
+$defBgColor:#f5f7fa;
+
+
+
+// 字体大小
+$defFontSize:12px;
+
+// 标题，弹框标题
+$titleFontSize:18px;
+
+// 字体
+// $defFont:"Microsoft YaHei","Helvetica Neue", "Hiragino Sans GB", "冬青黑体", Arial, Helvetica, sans-serif;
+$defFont:"PingFangSC-Regular", "PingFang SC", "Microsoft YaHei","Helvetica Neue", "Hiragino Sans GB", "冬青黑体", Arial, Helvetica, sans-serif;
+$defBlodFont: "PingFangSC-Medium", "PingFang SC", "Microsoft YaHei","Helvetica Neue", "Hiragino Sans GB", "冬青黑体", Arial, Helvetica, sans-serif;
+$defNumFont: "DINAlternate-Bold";
+
+// margin的值
+$marginList: 5, 8,10, 12,14, 16,18, 20, 22, 24, 32, 48;
+
+// margin的映射
+$marginMap: (
+  t: top,
+  b: bottom,
+  r: right,
+  l: left
+);
+
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  // subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+  menuWidth: $menuWidth;
+  headerHeight: $headerHeight;
+}

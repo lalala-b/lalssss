@@ -1,0 +1,123 @@
+@import "../../../../../assets/def.scss";
+.M-benchmarkAuthDialog {
+    @include dialogForm();
+
+    &Rights {
+        padding: 20px 0 26px 50px;
+        border-top: 1px solid #f3f3f3;
+
+        h3 {
+            color: #676b6d;
+            font-size: 16px;
+            font-weight: 400;
+            padding-bottom: 10px;
+        }
+
+        p {
+           color: #7a7f81;
+           font-size: 14px;
+           font-weight: 400;
+           line-height: 24px;
+        }
+    }
+
+    &Info {
+        margin:0 0 22px 90px;
+        dl {
+            margin: 0;
+            height: 46px;
+            display: flex;
+        }
+
+        dt {
+            width: 46px;
+            height: 46px;
+            margin: 0 14px 0 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        dd {
+            flex: 1;
+            margin: 0;
+        }
+
+        p {
+            color: #7a7f81;
+        }
+
+        .tp {
+            font-size: 16px;
+        }
+
+        .cp {
+            font-size:14px;
+        }
+    }
+
+    &Fns {
+        margin:0 0 22px 90px;
+    }
+
+    &Account {
+        &Row {
+            .el-form-item__content {
+                display: flex;
+            }
+        }
+
+        &Tip {
+            width: 40px;
+            position: relative;
+            &Txt {
+                line-height: 200%;
+                span {
+                    color:#c30;
+                }
+            }
+            &Q {
+                top: 50%;
+                left: 50%;
+                width: 18px;
+                height: 18px;
+                color: #B2B2B2;
+                cursor: pointer;
+                line-height: 18px;
+                text-align: center;
+                position: absolute;
+                border-radius: 18px;
+                border:1px solid #B2B2B2;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    &Tags {
+        display: flex;
+        &Label {
+            width: 78px;
+            text-align: right;
+            margin: 0 10px 0 0;
+        }
+
+        &Con {
+            flex:1;
+            p {
+                color:#909399;
+            }
+        }
+    }
+
+    .el-tag {
+        margin:0 10px 10px 0;
+    }
+    .input-new-tag {
+        width: 90px;
+        margin:0 0 10px 0;
+        vertical-align: bottom;
+    }
+}

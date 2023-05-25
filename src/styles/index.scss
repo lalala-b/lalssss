@@ -1,0 +1,461 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+// @import './btn.scss';
+@import './font/iconfont.css';
+// @import '//at.alicdn.com/t/font_2519434_7bejtkpwmjm.css';
+
+@import './normalize';
+
+body {
+  font-size: $defFontSize;
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: $defFont;
+}
+[data-bold] {
+  font-family: $defBlodFont;
+}
+
+[data-num] {
+  font-family: $defNumFont;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+  min-width: 1280px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.padding-content {
+  padding: 4px 0;
+}
+
+// a:focus,
+// a:active {
+//   outline: none;
+// }
+
+// a,
+// a:focus,
+// a:hover {
+//   cursor: pointer;
+//   text-decoration: none;
+// }
+
+div:focus {
+  outline: none;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+
+.block {
+  display: block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.inlineBlock {
+  display: block;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+//main-container全局样式
+.app-container {
+  padding: 20px;
+}
+
+.components-container {
+  margin: 30px 50px;
+  position: relative;
+}
+
+.pagination-container {
+  margin-top: 30px;
+}
+
+.text-center {
+  text-align: center
+}
+
+.sub-navbar {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+  transition: 600ms ease position;
+  background: linear-gradient(90deg, rgba(32, 182, 249, 1) 0%, rgba(32, 182, 249, 1) 0%, rgba(33, 120, 241, 1) 100%, rgba(33, 120, 241, 1) 100%);
+
+  .subtitle {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  &.draft {
+    background: #d0d0d0;
+  }
+
+  &.deleted {
+    background: #d0d0d0;
+  }
+}
+
+.link-type,
+.link-type:focus {
+  color: #337ab7;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(32, 160, 255);
+  }
+}
+
+.filter-container {
+  padding-bottom: 10px;
+
+  .filter-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+}
+
+//refine vue-multiselect plugin
+.multiselect {
+  line-height: 16px;
+}
+
+.multiselect--active {
+  z-index: 1000 !important;
+}
+
+.con {
+  @include con
+}
+
+.flex {
+  display: flex;
+}
+.flex-inline {
+  display: inline-flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+.flex-justify-start {
+  justify-content: flex-start;
+}
+.flex-justify-between {
+  justify-content: space-between;
+}
+.flex-justify-end {
+  justify-content: flex-end;
+}
+.flex-align-start {
+  align-items: flex-start;
+}
+.flex-align-center {
+  align-items: center;
+}
+.flex-align-end {
+  align-items: flex-end;
+}
+.flex-justify-around {
+  justify-content: space-around;
+}
+.flex-justify-center {
+  justify-content: center;
+}
+.flex-dir-col {
+  flex-direction: column
+}
+.flex1 {
+  flex: 1;
+}
+.flex-self-start {
+  align-self: start;
+}
+.el-icon-question {
+  color: rgb(178, 178, 178);
+}
+.text-over-hidden {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.text-over-hidden-1 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.text-over-hidden-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.text-over-hidden-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.text-over-hidden-5 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+.color-danger {
+  color: $red
+}
+.color-gry {
+  color: $--color-text-secondary;
+}
+
+@each $typeKey, $type in $marginMap {
+  @each $num in $marginList {
+    .m-#{$typeKey}-#{$num} {
+      margin-#{$type}: 1px * $num;
+    }
+    .p-#{$typeKey}-#{$num} {
+      padding-#{$type}: 1px * $num;
+    }
+  }
+}
+
+.accountCardPopper {
+  min-width: 0px !important;
+  width: inherit !important;
+}
+
+// ::-webkit-scrollbar {
+//   height: 100%;
+//   width: 0px;
+// }
+
+::-webkit-scrollbar-thumb {
+  background: #535353;
+
+  // background: hsla(0, 0%, 100%, .8)
+}
+
+::-webkit-scrollbar-thumb, ::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: $defBgColor;
+  margin: 10px 0
+}
+.search-view {
+  .el-form-item {
+    margin-right: 24px;
+  }
+
+  .el-input,
+  .el-select,
+  .el-input-number {
+    width: 248px
+  }
+}
+
+.table-view {
+  .el-table {
+    overflow: visible;
+    .el-table__header-wrapper {
+      overflow: auto;
+      position: sticky;
+      top: -24px;
+      z-index: 14;
+      &::-webkit-scrollbar {
+        display: none;
+        /**/
+      }
+
+      &::-webkit-scrollbar-track {
+        display: none;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        display: none;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        display: none;
+      }
+
+      &::-webkit-scrollbar-corner {
+        display: none;
+      }
+
+      table {
+        position: sticky;
+        top: 0;
+
+        thead {
+          position: relative;
+
+          th {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+          }
+        }
+      }
+      .is-hidden {
+        .cell {
+          visibility: initial;
+        }
+      }
+    }
+  }
+  .tooltip-label {
+    justify-content: center;
+    padding: 0 4px;
+  }
+}
+
+.el-table__header-wrapper {
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.el-table__header-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+
+.tip-red {
+  line-height: 1;
+  color: rgb(255, 73, 73)
+}
+.tip-gray {
+  color: $--color-text-secondary;
+}
+.text-left {
+  text-align: left;
+}
+
+.search-view.q-wrap {
+  padding-bottom: 0;
+
+  // padding-bottom: 0;
+  ::v-deep .el-input {
+    width: 200px;
+  }
+}
+
+.iconfont {
+  font-size: 19px;
+  &[type="primary"] {
+    color: $--color-primary;
+  }
+}
+
+.iconwenhao {
+  font-size: 16px;
+}
+.t-l {
+  text-align: left!important;
+}
+.t-r {
+  text-align: right !important;
+}
+.p-0 {
+  padding: 0!important;
+}
+.p-d-0 {
+  padding-bottom: 0!important;
+}
+
+.table-todo-wrap {
+  .el-link {
+    padding: 0 5px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.dialog-footer {
+  text-align: right;
+}
+
+.no-data {
+  min-height: 100px;
+  text-align: center;
+  line-height: 100px;
+  color: $--color-text-secondary;
+}
+// 筛选框样式
+.search-wrapper {
+  display: flex;
+  & > span {
+    flex-shrink: 0;
+    font-size: 14px;
+    color: #595959;
+    font-weight: 600;
+    padding-top: 6px;
+    margin-right: 12px;
+  }
+  .slot-search {
+    transform: translateX(-70px);
+  }
+}
+.red-tip {
+  color: red;
+}
+
+.dialogButtonClass {
+  padding: 8px 15px !important;
+}

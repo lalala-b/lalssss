@@ -1,0 +1,38 @@
+$--base-width: 220px;
+.norm-form {
+  .el-select, .el-input, .el-input-number, .el-date-editor {
+    width: $--base-width;
+  }
+  .w-100 {
+    width: 100%;
+  }
+}
+.el-form-item {
+  margin-bottom: 24px;
+  &.is-error {
+    .el-input {
+      &__inner {
+        // padding: 0 26px;
+      }
+      // &:after {
+      //   top: 50%;
+      //   right: 10px;
+      //   width: 16px;
+      //   content: "x";
+      //   color: #fff;
+      //   height: 16px;
+      //   font-size: 12px;
+      //   overflow: hidden;
+      //   line-height: 14px;
+      //   text-align: center;
+      //   border-radius: 50%;
+      //   position: absolute;
+      //   background: #FA5555;
+      //   transform: translateY(-50%);
+      // }
+    }
+  }
+  &__content, &__label {
+    line-height: 32px;
+  }
+}

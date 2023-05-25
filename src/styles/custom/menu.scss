@@ -1,0 +1,17 @@
+$height: 48px;
+.el-menu {
+  &-item {
+    height: $height;
+    line-height: $height;
+  }
+}
+.el-submenu {
+  &__title {
+    height: $height;
+    line-height: $height;
+  }
+  .el-menu-item {
+    height: $height;
+    line-height: $height;
+  }
+}

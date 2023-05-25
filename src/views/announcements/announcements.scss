@@ -1,0 +1,25 @@
+
+.P-announcements {
+    &Tab {
+        margin:  0 0 24px;
+        background-color: #fff;
+    }
+
+    &-list {
+        margin: 24px 0;
+
+        &Pager {
+            margin: 20px 0 24px;
+            text-align: center;
+            .el-pagination {
+                display: inline-block;
+            }
+        }
+
+        &Empty {
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.M-importAccounts {
+    &Drawer {
+        .el-drawer__header {
+            >:first-child {
+                font-size: 18px;
+            }
+        }
+
+        &Conten {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &Form {
+            flex:3;
+            padding:0 20px;
+        }
+
+        &Status {
+            flex: 1;
+            padding:0 20px;
+            p {
+                font-size: 14px;
+                margin: 0 0 10px;
+            }
+            em {
+                margin: 0 4px;
+                color: #409EFF;
+                display: inline-block;
+            }
+            i {
+                margin:0 4px;
+                color: #F56C6C;
+                display: inline-block;
+            }
+            span {
+                display: block;
+                margin: 10px 0 0;
+            }
+        }
+
+        &Footer {
+            display: flex;
+            text-align: center;
+            padding: 10px 20px;
+            button {
+                flex:1;
+            }
+        }
+    }
+}

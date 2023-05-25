@@ -1,0 +1,102 @@
+// global
+$--border-color-base: #D9D9D9;
+$--border-color-extra-light: #F0F0F0;
+$--border-color-light: #F0F0F0;
+$--border-color-lighter: #F0F0F0;
+$--color-danger: #FF4746;
+$--color-primary: #2c64ff;
+// $--color-primary: #005FF6;
+$--color-success: #28CC8D;
+$--color-disable-fill:#f5f5f5;
+$--color-text-placeholder: #BFBFBF;
+$--color-text-primary: #272727;
+$--color-text-regular: #595959;
+$--color-text-secondary: #8C8C8C;
+$--color-text-danger: #F5222D;
+
+$--color-warning: #FAAD14;
+$--border-radius-small:2px;
+
+$--font-size-extra-large:24px;
+$--font-size-large: 20px;
+$--font-size-base: 14px;
+$--font-size-medium: 12px;
+$--font-size-extra-medium: 16px;
+$--font-size-small: 12px;
+$--font-size-extra-small: 14px;
+
+$--font-size-extra-large: 22px;
+
+
+// local
+$--button-padding-vertical: 8px;
+$--button-padding-horizontal: 15px;
+$--button-border-radius: $--border-radius-small;
+$--button-small-border-radius: $--border-radius-small;
+$--button-small-padding-vertical: 4px;
+$--button-small-padding-horizontal: 8px;
+$--button-small-font-size: 14px;
+$--button-mini-padding-vertical: 1px;
+
+$--checkbox-bordered-height: 32px;
+$--checkbox-bordered-medium-height: 28px;
+$--checkbox-bordered-mini-height: 20px;
+$--checkbox-bordered-small-height: 24px;
+
+$--input-border-radius: $--border-radius-small;
+$--input-height: 32px;
+$--input-medium-height: 28px;
+$--input-mini-height: 20px;
+$--input-small-height: 24px;
+
+// 分页
+$--pagination-button-width: 32px;
+$--pagination-button-height: 32px;
+$--pagination-button-normal-color: #6b6b6b;
+
+// 单选
+$--radio-input-width:16px;
+$--radio-input-height:16px;
+$--radio-input-border-color-hover:$--color-primary;
+
+$--checkbox-disabled-input-fill:$--color-disable-fill;
+$--checkbox-disabled-border-color:$--color-text-placeholder;
+
+// 输入框
+$--input-hover-border:$--color-text-secondary;
+$--input-placeholder-color:$--color-text-placeholder;
+$--input-disabled-fill:$--color-disable-fill;
+$--input-disabled-border:#d9d9d9;
+
+/// tag
+$--tag-border-radius: 2px !default;
+$--tag-padding: 0 8px !default;
+$--tag-background-color: #E5EFFE;
+$--tag-mini-height: 22px;
+$--tag-mini-border-radius: $--border-radius-small;
+
+// 表格
+$--table-header-background-color:$--color-disable-fill;
+$--table-header-font-color:#666666;
+$--table-border:1px solid #ececec;
+
+// tabs
+$--tabs-header-background-color:#FAFCFF;
+
+// backtop
+$--backtop-background-color:rgba(0, 0, 0, 0.45);
+$--backtop-font-color: #fff;
+$--backtop-hover-background-color: rgba(0, 0, 0, 0.35);
+
+// dialog
+$--dialog-padding-primary: 24px;
+$--dialog-title-font-size: 16px;
+
+/* icon font path, required */
+$--font-path: "~element-ui/lib/theme-chalk/fonts";
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  theme: $--color-primary;
+}

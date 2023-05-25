@@ -1,0 +1,98 @@
+@import "../../../../../assets/container.scss";
+.P-advertisingLaunch {
+    &Con {
+        @include con();
+        margin: 0 0 24px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &Search {
+        &Normal {
+            &Con {
+                display: inline-block;
+                .el-form-item {
+                    white-space: nowrap;
+                }
+                .el-input {
+                    width: 120px;
+                    display: inline-block;
+                }
+                [data-t] {
+                    margin: 0 10px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    &Summary {
+        height: 112px;
+        background: #F5F7FA;
+
+        ul {
+            width: 100%;
+            display: flex;
+            padding: 24px 0;
+        }
+
+        li {
+            flex:1;
+            text-align: center;
+            &:nth-child(2) {
+                border-left: 1px solid #E4E7ED;
+                border-right: 1px solid #E4E7ED;
+            }
+        }
+
+        span {
+            color: #888;
+            font-size: 16px;
+        }
+
+        strong {
+            color: #303133;
+            display: block;
+            font-size: 30px;
+            margin: 12px 0 0;
+            font-weight: normal;
+        }
+    }
+
+    &Table {
+        margin: 24px 0 0;
+        &Head {
+            background: #F6F8FA;
+            th {
+                text-align: center;
+                background: #F6F8FA;
+                &:nth-child(1) {
+                    text-align: left;
+                }
+            }
+        }
+
+        &Row {
+            td {
+                text-align: center;
+                // background: #F6F8FA;
+                &:nth-child(1) {
+                    text-align: left;
+                }
+            }
+        }
+
+        &ThBr {
+            white-space: nowrap;
+        }
+
+        &Pager {
+            margin: 40px 0 0;
+            text-align: center;
+            .el-pagination {
+                display: inline-block;
+            }
+        }
+    }
+}
